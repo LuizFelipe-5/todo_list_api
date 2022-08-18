@@ -11,7 +11,7 @@ app.use(express.json());
 app.use("/", router);
 
 mongoose.connect(
-  "mongodb+srv://gcc180:ufla2022@cluster0.dw2mfkw.mongodb.net/?retryWrites=true&w=majority",
+  process.env.MONGODB_URI,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
