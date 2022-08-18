@@ -11,7 +11,7 @@ app.use(express.json());
 app.use("/", router);
 
 mongoose.connect(
-  "mongodb+srv://dbLuizF:uFVDjSJAuw4txk1f@gettingstarted.tfstj.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+  "mongodb+srv://gcc180:ufla2022@cluster0.dw2mfkw.mongodb.net/?retryWrites=true&w=majority",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -29,7 +29,7 @@ try {
 }
 
 app.get("/", (req, res) => {
-  return res.json({ titulo: "testestestes12" });
+  return res.json({ titulo: "Lista de tarefas" });
 });
 
 router.post("/tarefas", controller.cadastrarTarefa);
